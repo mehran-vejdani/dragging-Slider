@@ -33,6 +33,7 @@ body {
 }
 .icon:first-child {
   left: 0;
+  display: none;
   justify-content: flex-start;
 
   background: linear-gradient(90deg, #fff 70%, transparent);
@@ -64,6 +65,12 @@ body {
 .tabs-box {
   display: flex;
   list-style-type: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
 }
 .tab {
   white-space: nowrap;
@@ -73,4 +80,12 @@ body {
   border: 1px solid #d8d5f2;
   border-radius: 30px;
   cursor: pointer;
+}
+.tab {
+  user-select: none;
+}
+.active {
+  color: #fff;
+  background: #5372f0;
+  border-color: transparent;
 }
